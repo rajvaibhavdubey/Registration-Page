@@ -53,13 +53,11 @@ gulp.task('build', ['js', 'sass'], function(){
   // Yup, build the js and sass.
 });
 
-gulp.task('watch', ['js', 'sass'], function () {
+gulp.task('watch', ['js'], function () {
   gulp
     .watch('app/client/src/**/*.js', ['js']);
   gulp
     .watch('app/client/views/**/*.js', ['js']);
-  gulp
-    .watch('app/client/stylesheets/**/*.scss', ['sass']);
 });
 
 gulp.task('server', ['watch'], function(){
