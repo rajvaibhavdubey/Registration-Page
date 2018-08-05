@@ -34,12 +34,9 @@
   },
   "scripts": {
     "mongo": "mongod --dbpath db",
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "watch": "gulp server",
-    "prod": "gulp build && node app.js",
+    "start": "gulp server",
     "config": "cp .env.config .env",
-    "postinstall": "bower install && gulp build"
+    "postinstall": "bower install && npm run config"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
